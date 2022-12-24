@@ -42,7 +42,7 @@ Partial Class Register
         Me.BtnRegister.Location = New System.Drawing.Point(80, 277)
         Me.BtnRegister.Name = "BtnRegister"
         Me.BtnRegister.Size = New System.Drawing.Size(179, 32)
-        Me.BtnRegister.TabIndex = 0
+        Me.BtnRegister.TabIndex = 5
         Me.BtnRegister.Text = "Sign Up"
         Me.BtnRegister.UseVisualStyleBackColor = True
         '
@@ -92,7 +92,7 @@ Partial Class Register
         Me.TBName.Location = New System.Drawing.Point(81, 70)
         Me.TBName.Name = "TBName"
         Me.TBName.Size = New System.Drawing.Size(179, 23)
-        Me.TBName.TabIndex = 8
+        Me.TBName.TabIndex = 1
         '
         'Label4
         '
@@ -111,7 +111,7 @@ Partial Class Register
         Me.TBConfPassword.Location = New System.Drawing.Point(80, 240)
         Me.TBConfPassword.Name = "TBConfPassword"
         Me.TBConfPassword.Size = New System.Drawing.Size(179, 23)
-        Me.TBConfPassword.TabIndex = 6
+        Me.TBConfPassword.TabIndex = 4
         Me.TBConfPassword.UseSystemPasswordChar = True
         '
         'Label3
@@ -155,6 +155,7 @@ Partial Class Register
         '
         'Register
         '
+        Me.AcceptButton = Me.BtnRegister
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Bioskop.My.Resources.Resources.register_background1
