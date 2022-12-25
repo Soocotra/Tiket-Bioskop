@@ -15,7 +15,7 @@
         Dim plainPassword = TBPassword.Text
 
         If Users.Authentication(plainEmail, plainPassword) Then
-            Form1.Show()
+            MainTiketvb.Show()
             Me.Hide()
         Else
             MessageBox.Show("Email atau password salah")
@@ -25,4 +25,5 @@
     Private Sub LinkRegister_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkRegister.LinkClicked
         Register.Show()
     End Sub
+
 End Class

@@ -53,7 +53,7 @@ Partial Class Register
         Me.Label1.Font = New System.Drawing.Font("Cambria", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(105, -6)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(131, 37)
+        Me.Label1.Size = New System.Drawing.Size(163, 47)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Register"
         '
@@ -82,7 +82,7 @@ Partial Class Register
         Me.Label5.Font = New System.Drawing.Font("Cambria", 12.0!)
         Me.Label5.Location = New System.Drawing.Point(145, 48)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 19)
+        Me.Label5.Size = New System.Drawing.Size(61, 23)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Name"
         '
@@ -91,7 +91,7 @@ Partial Class Register
         Me.TBName.Font = New System.Drawing.Font("Cambria", 10.0!)
         Me.TBName.Location = New System.Drawing.Point(81, 70)
         Me.TBName.Name = "TBName"
-        Me.TBName.Size = New System.Drawing.Size(179, 23)
+        Me.TBName.Size = New System.Drawing.Size(179, 27)
         Me.TBName.TabIndex = 1
         '
         'Label4
@@ -101,7 +101,7 @@ Partial Class Register
         Me.Label4.Font = New System.Drawing.Font("Cambria", 12.0!)
         Me.Label4.Location = New System.Drawing.Point(102, 216)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(137, 19)
+        Me.Label4.Size = New System.Drawing.Size(168, 23)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Confirm Password"
         '
@@ -110,7 +110,7 @@ Partial Class Register
         Me.TBConfPassword.Font = New System.Drawing.Font("Cambria", 10.0!)
         Me.TBConfPassword.Location = New System.Drawing.Point(80, 240)
         Me.TBConfPassword.Name = "TBConfPassword"
-        Me.TBConfPassword.Size = New System.Drawing.Size(179, 23)
+        Me.TBConfPassword.Size = New System.Drawing.Size(179, 27)
         Me.TBConfPassword.TabIndex = 4
         Me.TBConfPassword.UseSystemPasswordChar = True
         '
@@ -121,7 +121,7 @@ Partial Class Register
         Me.Label3.Font = New System.Drawing.Font("Cambria", 12.0!)
         Me.Label3.Location = New System.Drawing.Point(134, 160)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 19)
+        Me.Label3.Size = New System.Drawing.Size(94, 23)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Password"
         '
@@ -132,7 +132,7 @@ Partial Class Register
         Me.Label2.Font = New System.Drawing.Font("Cambria", 12.0!)
         Me.Label2.Location = New System.Drawing.Point(146, 104)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(47, 19)
+        Me.Label2.Size = New System.Drawing.Size(60, 23)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Email"
         '
@@ -141,7 +141,7 @@ Partial Class Register
         Me.TBPassword.Font = New System.Drawing.Font("Cambria", 10.0!)
         Me.TBPassword.Location = New System.Drawing.Point(80, 182)
         Me.TBPassword.Name = "TBPassword"
-        Me.TBPassword.Size = New System.Drawing.Size(179, 23)
+        Me.TBPassword.Size = New System.Drawing.Size(179, 27)
         Me.TBPassword.TabIndex = 3
         Me.TBPassword.UseSystemPasswordChar = True
         '
@@ -150,16 +150,16 @@ Partial Class Register
         Me.TBEmail.Font = New System.Drawing.Font("Cambria", 10.0!)
         Me.TBEmail.Location = New System.Drawing.Point(80, 127)
         Me.TBEmail.Name = "TBEmail"
-        Me.TBEmail.Size = New System.Drawing.Size(179, 23)
+        Me.TBEmail.Size = New System.Drawing.Size(179, 27)
         Me.TBEmail.TabIndex = 2
         '
         'Register
         '
         Me.AcceptButton = Me.BtnRegister
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Bioskop.My.Resources.Resources.register_background1
-        Me.ClientSize = New System.Drawing.Size(890, 560)
+        Me.ClientSize = New System.Drawing.Size(888, 552)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MaximumSize = New System.Drawing.Size(906, 599)

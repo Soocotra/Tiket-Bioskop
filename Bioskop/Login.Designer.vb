@@ -38,7 +38,7 @@ Partial Class Login
         Me.Label1.Font = New System.Drawing.Font("Cambria", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(697, 132)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(196, 44)
+        Me.Label1.Size = New System.Drawing.Size(248, 57)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "WELCOME"
         '
@@ -47,7 +47,7 @@ Partial Class Login
         Me.TBEmail.Font = New System.Drawing.Font("Cambria", 13.0!)
         Me.TBEmail.Location = New System.Drawing.Point(659, 296)
         Me.TBEmail.Name = "TBEmail"
-        Me.TBEmail.Size = New System.Drawing.Size(277, 28)
+        Me.TBEmail.Size = New System.Drawing.Size(277, 33)
         Me.TBEmail.TabIndex = 1
         Me.TBEmail.Text = "user@example.net"
         Me.TBEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -57,7 +57,7 @@ Partial Class Login
         Me.TBPassword.Font = New System.Drawing.Font("Cambria", 13.0!)
         Me.TBPassword.Location = New System.Drawing.Point(659, 393)
         Me.TBPassword.Name = "TBPassword"
-        Me.TBPassword.Size = New System.Drawing.Size(277, 28)
+        Me.TBPassword.Size = New System.Drawing.Size(277, 33)
         Me.TBPassword.TabIndex = 2
         Me.TBPassword.Text = "Password"
         Me.TBPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -70,7 +70,7 @@ Partial Class Login
         Me.Label2.Font = New System.Drawing.Font("Cambria", 15.2!)
         Me.Label2.Location = New System.Drawing.Point(656, 249)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(63, 25)
+        Me.Label2.Size = New System.Drawing.Size(78, 31)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Email"
         '
@@ -81,7 +81,7 @@ Partial Class Login
         Me.Label3.Font = New System.Drawing.Font("Cambria", 15.2!)
         Me.Label3.Location = New System.Drawing.Point(656, 349)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(100, 25)
+        Me.Label3.Size = New System.Drawing.Size(122, 31)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Password"
         '
@@ -105,18 +105,19 @@ Partial Class Login
         Me.LinkRegister.Font = New System.Drawing.Font("Cambria", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkRegister.Location = New System.Drawing.Point(859, 271)
         Me.LinkRegister.Name = "LinkRegister"
-        Me.LinkRegister.Size = New System.Drawing.Size(68, 14)
+        Me.LinkRegister.Size = New System.Drawing.Size(80, 17)
         Me.LinkRegister.TabIndex = 6
         Me.LinkRegister.TabStop = True
         Me.LinkRegister.Text = "Create One!"
         '
         'Login
         '
+        Me.AcceptButton = Me.BtnLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.BackgroundImage = Global.Bioskop.My.Resources.Resources.sl_121019_25870_59_eps_1__1_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.ClientSize = New System.Drawing.Size(1072, 673)
+        Me.ClientSize = New System.Drawing.Size(1070, 665)
         Me.Controls.Add(Me.LinkRegister)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(Me.Label3)

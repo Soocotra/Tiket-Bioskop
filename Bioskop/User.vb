@@ -9,10 +9,10 @@ Public Class User
 
     Private sqlQuery As String
 
-    Private server As String = "localhost"
-    Private usernameDB As String = "root"
-    Private passwordDB As String = ""
-    Private database As String = "bioskop"
+    Private ReadOnly server As String = "localhost"
+    Private ReadOnly usernameDB As String = "root"
+    Private ReadOnly passwordDB As String = ""
+    Private ReadOnly database As String = "bioskop"
 
     Private email
     Private name
