@@ -88,6 +88,7 @@ Partial Class PostTicket
         Me.DGSchedule.ReadOnly = True
         Me.DGSchedule.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Cambria", 11.0!)
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black
         Me.DGSchedule.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.DGSchedule.RowTemplate.Height = 24
         Me.DGSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -119,7 +120,7 @@ Partial Class PostTicket
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Cambria", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(588, 146)
+        Me.Label3.Location = New System.Drawing.Point(587, 146)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(271, 33)
         Me.Label3.TabIndex = 5

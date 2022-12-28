@@ -15,7 +15,7 @@
         Dim plainPassword = TBPassword.Text
 
         If Users.Authentication(plainEmail, plainPassword) Then
-            MainTiketvb.Show()
+            Form1.Show()
             Me.Hide()
         Else
             MessageBox.Show("Email atau password salah")
