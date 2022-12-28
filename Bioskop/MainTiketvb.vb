@@ -36,8 +36,10 @@
 
                 If isDeleted Then
                     Dim studioId = DGTicket.Item("STUDIO", DGTicket.CurrentRow.Index).Value
+                    Dim selectedMovie = DGTicket.Item("MOVIE", DGTicket.CurrentRow.Index).Value
                     ticket.UpdateSeat(studioId, isIncrease:=True)
                     ReloadDataTickets()
+                    PostTicket.ReloadSchedules(selectedMovie)
                     MessageBox.Show("Tiket Berhasil Terhapus", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
                     MessageBox.Show("Terjadi Kesalahan", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -51,4 +53,5 @@
         Me.Close()
         Login.Show()
     End Sub
+
 End Class

@@ -28,7 +28,7 @@ Public Class Tiket
             Dim query = "SELECT TK.ID AS 'ID' ,FL.NAMA AS MOVIE, SC.ID_STUDIO AS STUDIO, SC.WAKTU_MULAI AS START, SC.WAKTU_SELESAI AS END FROM TICKETS AS TK JOIN SCHEDULES AS SC ON TK.ID_SCHEDULE = SC.ID JOIN FILMS AS FL ON SC.ID_FILM = FL.ID"
 
             sqlCommand.CommandText = query
-            Debug.WriteLine(query)
+
             sqlRead = sqlCommand.ExecuteReader
 
             result.Load(sqlRead)
@@ -51,7 +51,7 @@ Public Class Tiket
                          VALUE (" + scheduleId + "," + price + ")"
 
             sqlCommand.CommandText = query
-            Debug.WriteLine(query)
+
             sqlRead = sqlCommand.ExecuteReader
 
             dbConn.Close()
@@ -73,7 +73,7 @@ Public Class Tiket
             Dim query = "DELETE FROM TICKETS WHERE ID=" + ticketId
 
             sqlCommand.CommandText = query
-            Debug.WriteLine(query)
+
             sqlRead = sqlCommand.ExecuteReader()
 
             dbConn.Close()
@@ -105,7 +105,7 @@ Public Class Tiket
             End If
 
             sqlCommand.CommandText = query
-            Debug.WriteLine(query)
+
             sqlRead = sqlCommand.ExecuteReader
 
             dbConn.Close()
@@ -130,7 +130,7 @@ Public Class Tiket
                          AND ST.KAPASITAS > 0"
 
             sqlCommand.CommandText = query
-            Debug.WriteLine(query)
+
             sqlRead = sqlCommand.ExecuteReader
 
             result.Load(sqlRead)
@@ -153,7 +153,7 @@ Public Class Tiket
             Dim query = "SELECT NAMA FROM FILMS"
 
             sqlCommand.CommandText = query
-            Debug.WriteLine(query)
+            
             sqlRead = sqlCommand.ExecuteReader()
 
             While sqlRead.Read

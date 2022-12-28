@@ -162,6 +162,7 @@ Partial Class Register
         Me.ClientSize = New System.Drawing.Size(888, 552)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Cambria", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(906, 599)
         Me.MinimumSize = New System.Drawing.Size(906, 599)
         Me.Name = "Register"
