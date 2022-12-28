@@ -47,7 +47,7 @@ Public Class User
 
             sqlQuery = "INSERT INTO USERS (NAMA, EMAIL, PASSWORD) VALUE ('" + nameInput + "',LOWER('" + emailInput + "'),'" + EncryptMD5(passwordInput) + "')"
 
-            Debug.WriteLine(sqlQuery)
+
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -76,7 +76,7 @@ Public Class User
 
             sqlCommand.CommandText = queryAuth
 
-            Debug.WriteLine(queryAuth)
+
             sqlRead = sqlCommand.ExecuteReader
 
             If sqlRead.HasRows Then
@@ -112,7 +112,7 @@ Public Class User
 
             sqlCommand.CommandText = query
 
-            Debug.WriteLine(query)
+
             sqlRead = sqlCommand.ExecuteReader
 
             If sqlRead.HasRows Then

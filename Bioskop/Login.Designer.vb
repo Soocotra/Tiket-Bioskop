@@ -127,6 +127,7 @@ Partial Class Login
         Me.Controls.Add(Me.Label1)
         Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.DoubleBuffered = True
+        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1088, 712)
         Me.MinimumSize = New System.Drawing.Size(1088, 712)
         Me.Name = "Login"
