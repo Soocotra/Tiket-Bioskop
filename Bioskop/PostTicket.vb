@@ -7,6 +7,9 @@
         InitializeComponent()
 
         CBFilm.Items.Add(ticketStuff.GetFilm())
+        If CBFilm.Items.Count > 0 Then
+            CBFilm.SelectedIndex = 0
+        End If
     End Sub
     Private Sub CBFilm_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CBFilm.SelectedIndexChanged
         Dim selectedMovie = CBFilm.SelectedItem.ToString
@@ -28,7 +31,6 @@
             If msg = Windows.Forms.DialogResult.Yes Then
                 If isPosted Then
                     Dim studioId = DGSchedule.Item("STUDIO", DGSchedule.CurrentRow.Index).Value
-                    ticketStuff.UpdateSeat(studioId, isIncrease:=False)
                     MainTiketvb.ReloadDataTickets()
                     ReloadSchedules(CBFilm.SelectedItem.ToString)
                     MessageBox.Show("Tiket berhasil dipesan !", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)

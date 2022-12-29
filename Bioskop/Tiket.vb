@@ -88,33 +88,33 @@ Public Class Tiket
         End Try
     End Function
 
-    Public Sub UpdateSeat(studioId As String, isIncrease As Boolean)
-        Try
-            dbConn.ConnectionString = ConnectToDB()
-            dbConn.Open()
-            sqlCommand.Connection = dbConn
-            Dim query As String
-            If isIncrease Then
-                query = "UPDATE STUDIOS 
-                         SET KAPASITAS = KAPASITAS + 1
-                         WHERE ID= " + studioId
-            Else
-                query = "UPDATE STUDIOS 
-                         SET KAPASITAS = KAPASITAS - 1
-                         WHERE ID= " + studioId
-            End If
+    'Public Sub UpdateSeat(studioId As String, isIncrease As Boolean)
+    '    Try
+    '        dbConn.ConnectionString = ConnectToDB()
+    '        dbConn.Open()
+    '        sqlCommand.Connection = dbConn
+    '        Dim query As String
+    '        If isIncrease Then
+    '            query = "UPDATE STUDIOS 
+    '                     SET KAPASITAS = KAPASITAS + 1
+    '                     WHERE ID= " + studioId
+    '        Else
+    '            query = "UPDATE STUDIOS 
+    '                     SET KAPASITAS = KAPASITAS - 1
+    '                     WHERE ID= " + studioId
+    '        End If
 
-            sqlCommand.CommandText = query
+    '        sqlCommand.CommandText = query
 
-            sqlRead = sqlCommand.ExecuteReader
+    '        sqlRead = sqlCommand.ExecuteReader
 
-            dbConn.Close()
-        Catch ex As Exception
-            Debug.WriteLine(ex.Message)
-        Finally
-            dbConn.Close()
-        End Try
-    End Sub
+    '        dbConn.Close()
+    '    Catch ex As Exception
+    '        Debug.WriteLine(ex.Message)
+    '    Finally
+    '        dbConn.Close()
+    '    End Try
+    'End Sub
 
     Public Function GetSchedules(selectedMovie As String)
         Try
@@ -123,11 +123,23 @@ Public Class Tiket
             dbConn.Open()
             sqlCommand.Connection = dbConn
 
-            Dim query = "SELECT SC.ID AS ID, FL.NAMA, SC.ID_STUDIO AS STUDIO, ST.KAPASITAS AS CAPACITY, SC.WAKTU_MULAI AS 'START', SC.WAKTU_SELESAI AS 'END', CONCAT('Rp.', (FL.HARGA_FILM + ST.HARGA_KURSI)) AS 'TOTAL HARGA' FROM SCHEDULES AS SC 
-                         JOIN FILMS AS FL ON SC.ID_FILM = FL.ID 
-                         JOIN STUDIOS AS ST ON SC.ID_STUDIO = ST.ID 
-                         WHERE FL.NAMA ='" + selectedMovie + "'
-                         AND ST.KAPASITAS > 0"
+            Dim query = "SELECT 
+                            SC.ID AS ID, 
+                            FL.NAMA AS MOVIE, 
+                            SC.ID_STUDIO AS STUDIO,
+                            SC.WAKTU_MULAI AS START,
+                            SC.WAKTU_SELESAI AS END,
+                            CONCAT('Rp.', (FL.HARGA_FILM + ST.HARGA_KURSI)) AS 'TOTAL HARGA',
+                            ST.kapasitas - COUNT(TK.ID_SCHEDULE) AS KAPASITAS_TERSEDIA
+                         FROM
+                            schedules AS SC
+                         LEFT JOIN TICKETS AS TK ON TK.ID_SCHEDULE = SC.ID
+                         JOIN studios AS ST ON ST.ID = SC.id_studio
+                         JOIN FILMS AS FL ON FL.ID = SC.id_film
+                            WHERE FL.NAMA = '" + selectedMovie + "'
+                         GROUP BY
+                           TK.ID_SCHEDULE, SC.ID
+                         HAVING KAPASITAS_TERSEDIA > 0"
 
             sqlCommand.CommandText = query
 
