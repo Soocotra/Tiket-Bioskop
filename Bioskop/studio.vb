@@ -61,4 +61,7 @@
 
     End Sub
 
+    Private Sub DataGridViewStudio_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridViewStudio.CellContentClick
+
+    End Sub
 End Class

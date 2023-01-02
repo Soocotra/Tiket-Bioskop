@@ -103,7 +103,7 @@ Public Class DataStudio
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE studios SET " &
                         "kapasitas='" & kapasitas & "', " &
-                        "harga_kursi='" & harga_kursi & "', " &
+                        "harga_kursi='" & harga_kursi & "' " &
                         "WHERE id='" & ID & "'"
 
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)

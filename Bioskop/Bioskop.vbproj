@@ -161,6 +161,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="EditStudio.resx">
+      <DependentUpon>EditStudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusStudio.resx">
+      <DependentUpon>HapusStudio.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>

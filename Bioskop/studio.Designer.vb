@@ -25,9 +25,6 @@ Partial Class studio
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(studio))
         Me.DataGridViewStudio = New System.Windows.Forms.DataGridView()
-        Me.ID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.kapasitas = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.harga_kursi = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.BtnTambah = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
@@ -39,7 +36,6 @@ Partial Class studio
         '
         Me.DataGridViewStudio.BackgroundColor = System.Drawing.Color.White
         Me.DataGridViewStudio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewStudio.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ID, Me.kapasitas, Me.harga_kursi})
         Me.DataGridViewStudio.Location = New System.Drawing.Point(25, 25)
         Me.DataGridViewStudio.Name = "DataGridViewStudio"
         Me.DataGridViewStudio.RowHeadersWidth = 51
@@ -49,32 +45,11 @@ Partial Class studio
         Me.DataGridViewStudio.Size = New System.Drawing.Size(430, 150)
         Me.DataGridViewStudio.TabIndex = 0
         '
-        'ID
-        '
-        Me.ID.HeaderText = "ID"
-        Me.ID.MinimumWidth = 6
-        Me.ID.Name = "ID"
-        Me.ID.Width = 125
-        '
-        'kapasitas
-        '
-        Me.kapasitas.HeaderText = "Kapasitas "
-        Me.kapasitas.MinimumWidth = 6
-        Me.kapasitas.Name = "kapasitas"
-        Me.kapasitas.Width = 125
-        '
-        'harga_kursi
-        '
-        Me.harga_kursi.HeaderText = "Harga Kursi"
-        Me.harga_kursi.MinimumWidth = 6
-        Me.harga_kursi.Name = "harga_kursi"
-        Me.harga_kursi.Width = 125
-        '
         'BtnTambah
         '
         Me.BtnTambah.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnTambah.ForeColor = System.Drawing.Color.Maroon
-        Me.BtnTambah.Location = New System.Drawing.Point(25, 223)
+        Me.BtnTambah.Location = New System.Drawing.Point(25, 214)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(75, 23)
         Me.BtnTambah.TabIndex = 1
@@ -85,7 +60,7 @@ Partial Class studio
         '
         Me.BtnEdit.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnEdit.ForeColor = System.Drawing.Color.Maroon
-        Me.BtnEdit.Location = New System.Drawing.Point(121, 223)
+        Me.BtnEdit.Location = New System.Drawing.Point(119, 214)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 2
@@ -96,7 +71,7 @@ Partial Class studio
         '
         Me.BtnHapus.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHapus.ForeColor = System.Drawing.Color.Maroon
-        Me.BtnHapus.Location = New System.Drawing.Point(215, 223)
+        Me.BtnHapus.Location = New System.Drawing.Point(214, 214)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(75, 23)
         Me.BtnHapus.TabIndex = 3
@@ -122,9 +97,6 @@ Partial Class studio
     End Sub
 
     Friend WithEvents DataGridViewStudio As DataGridView
-    Friend WithEvents ID As DataGridViewTextBoxColumn
-    Friend WithEvents kapasitas As DataGridViewTextBoxColumn
-    Friend WithEvents harga_kursi As DataGridViewTextBoxColumn
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents BtnTambah As Button
     Friend WithEvents BtnEdit As Button
