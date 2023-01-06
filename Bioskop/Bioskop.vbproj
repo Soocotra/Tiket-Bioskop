@@ -111,7 +111,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataPerpus.vb" />
+    <Compile Include="DataFilm.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -119,10 +119,22 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HapusFilm.Designer.vb">
+      <DependentUpon>HapusFilm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
     <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFilm.Designer.vb">
+      <DependentUpon>MainFilm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainFilm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainTiketvb.Designer.vb">
@@ -159,15 +171,33 @@
     <Compile Include="Register.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TambahFilm.Designer.vb">
+      <DependentUpon>TambahFilm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Tiket.vb" />
+    <Compile Include="UpdateFilm.Designer.vb">
+      <DependentUpon>UpdateFilm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateFilm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HapusFilm.resx">
+      <DependentUpon>HapusFilm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFilm.resx">
+      <DependentUpon>MainFilm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainTiketvb.resx">
       <DependentUpon>MainTiketvb.vb</DependentUpon>
@@ -183,6 +213,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahFilm.resx">
+      <DependentUpon>TambahFilm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateFilm.resx">
+      <DependentUpon>UpdateFilm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -4,11 +4,6 @@ Imports MySql.Data.MySqlClient
 
 Public Class DataFilm
 
-
-    Public Sub New()
-
-    End Sub
-
     Private namaFilm As String
     Private Genre_Arr As New List(Of String)
     Private Deks As String
@@ -190,8 +185,7 @@ Public Class DataFilm
         Return result
     End Function
 
-    Public Function AddDataKoleksiDatabase(
-                                            namaFilm As String,
+    Public Function AddDataKoleksiDatabase(namaFilm As String,
                                             Genre_Arr As String,
                                             Deks As String,
                                             Dir As String,
@@ -206,7 +200,7 @@ Public Class DataFilm
             dbConn.Open()
             sqlComm.Connection = dbConn
             sqlQuery = "INSERT INTO FILMS(NAMA,GENRE,DESKRIPSI,
-                               DIRECTOR,DURATION,DATE_RELEASE,BAHASA, HARGA_FILM,PHOTO) VALUE (
+                               DIRECTOR,DURATION,DATE_RELEASE,BAHASA, HARGA_FILM,FOTO) VALUE (
                         '" & namaFilm & "',
                         '" & Genre_Arr & "',
                         '" & Deks & "',
@@ -224,6 +218,7 @@ Public Class DataFilm
             sqlRead.Close()
             dbConn.Close()
         Catch ex As Exception
+            MessageBox.Show("apa si")
             Return ex.Message
         Finally
             dbConn.Dispose()
@@ -243,8 +238,8 @@ Public Class DataFilm
         sqlComm.Connection = dbConn
         sqlComm.CommandText = "SELECT ID,
                                NAMA,GENRE,DESKRIPSI,
-                               DIRECTOR,DURATION,DATE_RELEASE,BAHASA, HARGA_FILM,PHOTO
-                               FROM FILMS WHERE ID'" & ID & "'"
+                               DIRECTOR,DURATION,DATE_RELEASE,BAHASA, HARGA_FILM,FOTO
+                               FROM FILMS WHERE ID ='" & ID & "'"
 
         sqlRead = sqlComm.ExecuteReader
 
@@ -259,8 +254,6 @@ Public Class DataFilm
             result.Add(sqlRead.GetString(7).ToString())
             result.Add(sqlRead.GetString(8).ToString())
             result.Add(sqlRead.GetString(9).ToString())
-            result.Add(sqlRead.GetString(10).ToString())
-            result.Add(sqlRead.GetString(11).ToString())
         End While
 
         sqlRead.Close()
@@ -318,8 +311,7 @@ Public Class DataFilm
         Try
             dbConn.Open()
             sqlComm.Connection = dbConn
-            sqlQuery = "DELETE FILMS" &
-                       "WHERE ID_KOLEKSI='" & ID & "'"
+            sqlQuery = "DELETE FROM FILMS WHERE ID='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
 
@@ -333,6 +325,7 @@ Public Class DataFilm
 
 
         Catch ex As Exception
+            MessageBox.Show("apa si")
             Return ex.Message
         Finally
             dbConn.Dispose()

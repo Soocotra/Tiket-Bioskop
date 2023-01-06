@@ -36,17 +36,18 @@ Partial Class TambahFilm
         Me.TxtDur = New System.Windows.Forms.TextBox()
         Me.DTRelease = New System.Windows.Forms.DateTimePicker()
         Me.GBBahasa = New System.Windows.Forms.GroupBox()
-        Me.RdIndo = New System.Windows.Forms.RadioButton()
-        Me.RdJepang = New System.Windows.Forms.RadioButton()
         Me.RdInggris = New System.Windows.Forms.RadioButton()
+        Me.RdJepang = New System.Windows.Forms.RadioButton()
+        Me.RdIndo = New System.Windows.Forms.RadioButton()
         Me.TxtPrice = New System.Windows.Forms.TextBox()
         Me.GbGenre = New System.Windows.Forms.GroupBox()
-        Me.CBHorror = New System.Windows.Forms.CheckBox()
-        Me.CBComedy = New System.Windows.Forms.CheckBox()
         Me.CBRomance = New System.Windows.Forms.CheckBox()
-        Me.PBPhoto = New System.Windows.Forms.PictureBox()
+        Me.CBComedy = New System.Windows.Forms.CheckBox()
+        Me.CBHorror = New System.Windows.Forms.CheckBox()
         Me.BtnTambahPhoto = New System.Windows.Forms.Button()
         Me.BtnTambah = New System.Windows.Forms.Button()
+        Me.OpenFilePic = New System.Windows.Forms.OpenFileDialog()
+        Me.PBPhoto = New System.Windows.Forms.PictureBox()
         Me.GBBahasa.SuspendLayout()
         Me.GbGenre.SuspendLayout()
         CType(Me.PBPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -172,16 +173,16 @@ Partial Class TambahFilm
         Me.GBBahasa.TabStop = False
         Me.GBBahasa.Text = "Bahasa"
         '
-        'RdIndo
+        'RdInggris
         '
-        Me.RdIndo.AutoSize = True
-        Me.RdIndo.Location = New System.Drawing.Point(19, 33)
-        Me.RdIndo.Name = "RdIndo"
-        Me.RdIndo.Size = New System.Drawing.Size(137, 20)
-        Me.RdIndo.TabIndex = 0
-        Me.RdIndo.TabStop = True
-        Me.RdIndo.Text = "Bahasa Indonesia"
-        Me.RdIndo.UseVisualStyleBackColor = True
+        Me.RdInggris.AutoSize = True
+        Me.RdInggris.Location = New System.Drawing.Point(19, 85)
+        Me.RdInggris.Name = "RdInggris"
+        Me.RdInggris.Size = New System.Drawing.Size(118, 20)
+        Me.RdInggris.TabIndex = 2
+        Me.RdInggris.TabStop = True
+        Me.RdInggris.Text = "Bahasa Inggris"
+        Me.RdInggris.UseVisualStyleBackColor = True
         '
         'RdJepang
         '
@@ -194,16 +195,16 @@ Partial Class TambahFilm
         Me.RdJepang.Text = "Bahasa Jepang"
         Me.RdJepang.UseVisualStyleBackColor = True
         '
-        'RdInggris
+        'RdIndo
         '
-        Me.RdInggris.AutoSize = True
-        Me.RdInggris.Location = New System.Drawing.Point(19, 85)
-        Me.RdInggris.Name = "RdInggris"
-        Me.RdInggris.Size = New System.Drawing.Size(118, 20)
-        Me.RdInggris.TabIndex = 2
-        Me.RdInggris.TabStop = True
-        Me.RdInggris.Text = "Bahasa Inggris"
-        Me.RdInggris.UseVisualStyleBackColor = True
+        Me.RdIndo.AutoSize = True
+        Me.RdIndo.Location = New System.Drawing.Point(19, 33)
+        Me.RdIndo.Name = "RdIndo"
+        Me.RdIndo.Size = New System.Drawing.Size(137, 20)
+        Me.RdIndo.TabIndex = 0
+        Me.RdIndo.TabStop = True
+        Me.RdIndo.Text = "Bahasa Indonesia"
+        Me.RdIndo.UseVisualStyleBackColor = True
         '
         'TxtPrice
         '
@@ -224,15 +225,15 @@ Partial Class TambahFilm
         Me.GbGenre.TabStop = False
         Me.GbGenre.Text = "Genre"
         '
-        'CBHorror
+        'CBRomance
         '
-        Me.CBHorror.AutoSize = True
-        Me.CBHorror.Location = New System.Drawing.Point(19, 32)
-        Me.CBHorror.Name = "CBHorror"
-        Me.CBHorror.Size = New System.Drawing.Size(67, 20)
-        Me.CBHorror.TabIndex = 0
-        Me.CBHorror.Text = "Horror"
-        Me.CBHorror.UseVisualStyleBackColor = True
+        Me.CBRomance.AutoSize = True
+        Me.CBRomance.Location = New System.Drawing.Point(19, 84)
+        Me.CBRomance.Name = "CBRomance"
+        Me.CBRomance.Size = New System.Drawing.Size(88, 20)
+        Me.CBRomance.TabIndex = 2
+        Me.CBRomance.Text = "Romance"
+        Me.CBRomance.UseVisualStyleBackColor = True
         '
         'CBComedy
         '
@@ -244,23 +245,15 @@ Partial Class TambahFilm
         Me.CBComedy.Text = "Comedy"
         Me.CBComedy.UseVisualStyleBackColor = True
         '
-        'CBRomance
+        'CBHorror
         '
-        Me.CBRomance.AutoSize = True
-        Me.CBRomance.Location = New System.Drawing.Point(19, 84)
-        Me.CBRomance.Name = "CBRomance"
-        Me.CBRomance.Size = New System.Drawing.Size(88, 20)
-        Me.CBRomance.TabIndex = 2
-        Me.CBRomance.Text = "Romance"
-        Me.CBRomance.UseVisualStyleBackColor = True
-        '
-        'PBPhoto
-        '
-        Me.PBPhoto.Location = New System.Drawing.Point(359, 36)
-        Me.PBPhoto.Name = "PBPhoto"
-        Me.PBPhoto.Size = New System.Drawing.Size(116, 136)
-        Me.PBPhoto.TabIndex = 16
-        Me.PBPhoto.TabStop = False
+        Me.CBHorror.AutoSize = True
+        Me.CBHorror.Location = New System.Drawing.Point(19, 32)
+        Me.CBHorror.Name = "CBHorror"
+        Me.CBHorror.Size = New System.Drawing.Size(67, 20)
+        Me.CBHorror.TabIndex = 0
+        Me.CBHorror.Text = "Horror"
+        Me.CBHorror.UseVisualStyleBackColor = True
         '
         'BtnTambahPhoto
         '
@@ -273,12 +266,24 @@ Partial Class TambahFilm
         '
         'BtnTambah
         '
-        Me.BtnTambah.Location = New System.Drawing.Point(321, 965)
+        Me.BtnTambah.Location = New System.Drawing.Point(330, 921)
         Me.BtnTambah.Name = "BtnTambah"
         Me.BtnTambah.Size = New System.Drawing.Size(128, 39)
         Me.BtnTambah.TabIndex = 18
         Me.BtnTambah.Text = "Tambah"
         Me.BtnTambah.UseVisualStyleBackColor = True
+        '
+        'OpenFilePic
+        '
+        Me.OpenFilePic.FileName = "OpenFileDialog1"
+        '
+        'PBPhoto
+        '
+        Me.PBPhoto.Location = New System.Drawing.Point(359, 36)
+        Me.PBPhoto.Name = "PBPhoto"
+        Me.PBPhoto.Size = New System.Drawing.Size(116, 136)
+        Me.PBPhoto.TabIndex = 16
+        Me.PBPhoto.TabStop = False
         '
         'TambahFilm
         '
@@ -341,4 +346,5 @@ Partial Class TambahFilm
     Friend WithEvents PBPhoto As PictureBox
     Friend WithEvents BtnTambahPhoto As Button
     Friend WithEvents BtnTambah As Button
+    Friend WithEvents OpenFilePic As OpenFileDialog
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class UpdateFilm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class UpdateFilm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.BtnUpdatePhoto = New System.Windows.Forms.Button()
-        Me.PBPhoto = New System.Windows.Forms.PictureBox()
         Me.GbGenre = New System.Windows.Forms.GroupBox()
         Me.CBRomance = New System.Windows.Forms.CheckBox()
         Me.CBComedy = New System.Windows.Forms.CheckBox()
@@ -47,9 +46,11 @@ Partial Class UpdateFilm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.PBPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PBPhoto = New System.Windows.Forms.PictureBox()
+        Me.OpenFilePic = New System.Windows.Forms.OpenFileDialog()
         Me.GbGenre.SuspendLayout()
         Me.GBBahasa.SuspendLayout()
+        CType(Me.PBPhoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BtnUpdate
@@ -69,14 +70,6 @@ Partial Class UpdateFilm
         Me.BtnUpdatePhoto.TabIndex = 36
         Me.BtnUpdatePhoto.Text = "Update"
         Me.BtnUpdatePhoto.UseVisualStyleBackColor = True
-        '
-        'PBPhoto
-        '
-        Me.PBPhoto.Location = New System.Drawing.Point(340, 51)
-        Me.PBPhoto.Name = "PBPhoto"
-        Me.PBPhoto.Size = New System.Drawing.Size(116, 136)
-        Me.PBPhoto.TabIndex = 35
-        Me.PBPhoto.TabStop = False
         '
         'GbGenre
         '
@@ -280,6 +273,18 @@ Partial Class UpdateFilm
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Nama Film"
         '
+        'PBPhoto
+        '
+        Me.PBPhoto.Location = New System.Drawing.Point(340, 51)
+        Me.PBPhoto.Name = "PBPhoto"
+        Me.PBPhoto.Size = New System.Drawing.Size(116, 136)
+        Me.PBPhoto.TabIndex = 35
+        Me.PBPhoto.TabStop = False
+        '
+        'OpenFilePic
+        '
+        Me.OpenFilePic.FileName = "OpenFilePic"
+        '
         'UpdateFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -306,11 +311,11 @@ Partial Class UpdateFilm
         Me.Controls.Add(Me.Label1)
         Me.Name = "UpdateFilm"
         Me.Text = "Update Film"
-        CType(Me.PBPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GbGenre.ResumeLayout(False)
         Me.GbGenre.PerformLayout()
         Me.GBBahasa.ResumeLayout(False)
         Me.GBBahasa.PerformLayout()
+        CType(Me.PBPhoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -341,4 +346,5 @@ Partial Class UpdateFilm
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents OpenFilePic As OpenFileDialog
 End Class
