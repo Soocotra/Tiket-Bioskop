@@ -24,9 +24,9 @@ Partial Class MainFilm
     Private Sub InitializeComponent()
         Me.DGFilm = New System.Windows.Forms.DataGridView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnTambah = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnHapus = New System.Windows.Forms.Button()
         CType(Me.DGFilm, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -50,41 +50,41 @@ Partial Class MainFilm
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Daftar Film "
         '
-        'Button1
+        'BtnTambah
         '
-        Me.Button1.Location = New System.Drawing.Point(142, 544)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(125, 33)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Tambah"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnTambah.Location = New System.Drawing.Point(142, 544)
+        Me.BtnTambah.Name = "BtnTambah"
+        Me.BtnTambah.Size = New System.Drawing.Size(125, 33)
+        Me.BtnTambah.TabIndex = 2
+        Me.BtnTambah.Text = "Tambah"
+        Me.BtnTambah.UseVisualStyleBackColor = True
         '
-        'Button4
+        'BtnEdit
         '
-        Me.Button4.Location = New System.Drawing.Point(431, 544)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 33)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Edit"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.BtnEdit.Location = New System.Drawing.Point(431, 544)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(125, 33)
+        Me.BtnEdit.TabIndex = 5
+        Me.BtnEdit.Text = "Edit"
+        Me.BtnEdit.UseVisualStyleBackColor = True
         '
-        'Button2
+        'BtnHapus
         '
-        Me.Button2.Location = New System.Drawing.Point(715, 544)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(125, 33)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Hapus"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnHapus.Location = New System.Drawing.Point(715, 544)
+        Me.BtnHapus.Name = "BtnHapus"
+        Me.BtnHapus.Size = New System.Drawing.Size(125, 33)
+        Me.BtnHapus.TabIndex = 6
+        Me.BtnHapus.Text = "Hapus"
+        Me.BtnHapus.UseVisualStyleBackColor = True
         '
         'MainFilm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(973, 649)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnHapus)
+        Me.Controls.Add(Me.BtnEdit)
+        Me.Controls.Add(Me.BtnTambah)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DGFilm)
         Me.Name = "MainFilm"
@@ -97,7 +97,7 @@ Partial Class MainFilm
 
     Friend WithEvents DGFilm As DataGridView
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnTambah As Button
+    Friend WithEvents BtnEdit As Button
+    Friend WithEvents BtnHapus As Button
 End Class
