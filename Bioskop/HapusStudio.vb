@@ -1,5 +1,6 @@
 ﻿Public Class HapusStudio
 
+
     Public Sub New()
 
         ' This call is required by the designer.
@@ -17,5 +18,8 @@
 
     End Sub
 
+    'Private Sub LblID_TextChanged(sender As Object, e As EventArgs) Handles LblID.TextChanged
+    '    LblID.Text = studio.list
+    'End Sub
 
 End Class

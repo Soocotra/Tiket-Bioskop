@@ -32,7 +32,7 @@ Partial Class HapusStudio
         '
         Me.BtnHapus.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.BtnHapus.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnHapus.Location = New System.Drawing.Point(123, 175)
+        Me.BtnHapus.Location = New System.Drawing.Point(124, 179)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(4)
         Me.BtnHapus.Name = "BtnHapus"
         Me.BtnHapus.Size = New System.Drawing.Size(100, 28)
