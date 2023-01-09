@@ -111,6 +111,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteTicket.Designer.vb">
+      <DependentUpon>DeleteTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     <Compile Include="User.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DeleteTicket.resx">
+      <DependentUpon>DeleteTicket.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

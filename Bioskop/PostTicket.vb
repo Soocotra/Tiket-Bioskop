@@ -6,7 +6,9 @@
         ' This call is required by the designer.
         InitializeComponent()
 
-        CBFilm.Items.Add(ticketStuff.GetFilm())
+        For Each film In ticketStuff.GetFilm()
+            CBFilm.Items.Add(film)
+        Next
         If CBFilm.Items.Count > 0 Then
             CBFilm.SelectedIndex = 0
         End If

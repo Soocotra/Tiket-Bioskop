@@ -15,10 +15,6 @@
         DGTicket.DataSource = ticket.index()
     End Sub
 
-    Private Sub DGTicket_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGTicket.CellContentClick
-
-    End Sub
-
     Private Sub BTPesan_Click(sender As Object, e As EventArgs) Handles BTPesan.Click
         PostTicket.Show()
     End Sub
@@ -27,24 +23,9 @@
         If DGTicket.SelectedRows.Count < 1 Then
             MessageBox.Show("Pilih jadwal untuk melanjutkan")
         Else
-            Dim opt = MessageBox.Show("Hapus Tiket ?", "Delete Ticket", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-
-            If opt = Windows.Forms.DialogResult.Yes Then
-                Dim selectedRow = DGTicket.Item("ID", DGTicket.CurrentRow.Index).Value
-
-                Dim isDeleted = ticket.destroy(selectedRow.ToString)
-
-                If isDeleted Then
-                    Dim studioId = DGTicket.Item("STUDIO", DGTicket.CurrentRow.Index).Value
-                    Dim selectedMovie = DGTicket.Item("MOVIE", DGTicket.CurrentRow.Index).Value
-                    ReloadDataTickets()
-                    PostTicket.ReloadSchedules(selectedMovie)
-                    MessageBox.Show("Tiket Berhasil Terhapus", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Else
-                    MessageBox.Show("Terjadi Kesalahan", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
-            End If
-
+            ticket.GSIDTicket = DGTicket.Item("ID", DGTicket.CurrentRow.Index).Value
+            ticket.GSMovie = DGTicket.Item("MOVIE", DGTicket.CurrentRow.Index).Value
+            DeleteTicket.Show()
         End If
     End Sub
 
