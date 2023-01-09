@@ -14,6 +14,26 @@ Public Class Tiket
     Private ReadOnly passwordDB As String = ""
     Private ReadOnly database As String = "bioskop"
 
+    Private idTicket
+    Private movie
+    Public Property GSIDTicket()
+        Get
+            Return idTicket
+        End Get
+        Set(value)
+            idTicket = value
+        End Set
+    End Property
+
+    Public Property GSMovie()
+        Get
+            Return movie
+        End Get
+        Set(value)
+            movie = value
+        End Set
+    End Property
+
     Public Function ConnectToDB()
         Return "server =" + server + ";" + "user id=" + usernameDB + ";" + "password =" + passwordDB + ";" + "database =" + database
     End Function
@@ -165,14 +185,14 @@ Public Class Tiket
             Dim query = "SELECT NAMA FROM FILMS"
 
             sqlCommand.CommandText = query
-            
+
             sqlRead = sqlCommand.ExecuteReader()
 
             While sqlRead.Read
                 result.Add(sqlRead.GetString(0).ToString())
             End While
 
-            Return result(0)
+            Return result
         Catch ex As Exception
             Return ex.Message
         Finally
