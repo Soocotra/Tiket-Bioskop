@@ -34,14 +34,18 @@ Partial Class studio
         '
         'DataGridViewStudio
         '
+        Me.DataGridViewStudio.AllowUserToAddRows = False
+        Me.DataGridViewStudio.AllowUserToDeleteRows = False
         Me.DataGridViewStudio.BackgroundColor = System.Drawing.Color.White
         Me.DataGridViewStudio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewStudio.Location = New System.Drawing.Point(25, 25)
         Me.DataGridViewStudio.Name = "DataGridViewStudio"
+        Me.DataGridViewStudio.ReadOnly = True
         Me.DataGridViewStudio.RowHeadersWidth = 51
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DataGridViewStudio.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridViewStudio.RowTemplate.Height = 24
+        Me.DataGridViewStudio.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridViewStudio.Size = New System.Drawing.Size(430, 150)
         Me.DataGridViewStudio.TabIndex = 0
         '

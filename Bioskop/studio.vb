@@ -55,8 +55,9 @@
         Dim selectedStudio As List(Of String) = studio.Data_Studio.GetDataStudioByIDDatabase(selectedTableStudio)
 
         Me.selectedTableStudio = selectedStudio(0)
-
         Dim hapus_studio = New HapusStudio()
+
+        hapus_studio.LblID.Text = Me.selectedTableStudio
         hapus_studio.Show()
 
     End Sub

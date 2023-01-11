@@ -31,6 +31,8 @@ Partial Class HapusStudio
         'BtnHapus
         '
         Me.BtnHapus.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.BtnHapus.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnHapus.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHapus.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHapus.Location = New System.Drawing.Point(124, 179)
         Me.BtnHapus.Margin = New System.Windows.Forms.Padding(4)
@@ -45,7 +47,7 @@ Partial Class HapusStudio
         Me.LblID.AutoSize = True
         Me.LblID.Font = New System.Drawing.Font("Cambria", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblID.ForeColor = System.Drawing.Color.IndianRed
-        Me.LblID.Location = New System.Drawing.Point(206, 95)
+        Me.LblID.Location = New System.Drawing.Point(220, 95)
         Me.LblID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LblID.Name = "LblID"
         Me.LblID.Size = New System.Drawing.Size(46, 36)
@@ -79,6 +81,7 @@ Partial Class HapusStudio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(355, 230)
         Me.Controls.Add(Me.LblStudio)
         Me.Controls.Add(Me.BtnHapus)

@@ -12,7 +12,7 @@ Public Class DataStudio
     Private server As String = "localhost"
     Private username As String = "root"
     Private password As String = ""
-    Private database As String = "mysql"
+    Private database As String = "bioskop"
 
 
     Public Function GetDataStudioDatabase() As DataTable
