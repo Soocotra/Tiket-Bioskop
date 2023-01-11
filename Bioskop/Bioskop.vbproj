@@ -111,18 +111,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="DataStudio.vb" />
     <Compile Include="EditStudio.Designer.vb">
       <DependentUpon>EditStudio.vb</DependentUpon>
     </Compile>
     <Compile Include="EditStudio.vb">
-
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DeleteTicket.Designer.vb">
       <DependentUpon>DeleteTicket.vb</DependentUpon>
     </Compile>
     <Compile Include="DeleteTicket.vb">
-
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -132,12 +131,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="HapusStudio.Designer.vb">
       <DependentUpon>HapusStudio.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusStudio.vb">
-
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -148,7 +147,6 @@
       <DependentUpon>MainTiketvb.vb</DependentUpon>
     </Compile>
     <Compile Include="MainTiketvb.vb">
-
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -167,7 +165,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-
     <Compile Include="studio.Designer.vb">
       <DependentUpon>studio.vb</DependentUpon>
     </Compile>
@@ -187,7 +184,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HapusStudio.resx">
       <DependentUpon>HapusStudio.vb</DependentUpon>
-
+    </EmbeddedResource>
     <Compile Include="PostTicket.Designer.vb">
       <DependentUpon>PostTicket.vb</DependentUpon>
     </Compile>
@@ -215,7 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainTiketvb.resx">
       <DependentUpon>MainTiketvb.vb</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -223,19 +219,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-
     <EmbeddedResource Include="studio.resx">
       <DependentUpon>studio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TambahStudio.resx">
       <DependentUpon>TambahStudio.vb</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="PostTicket.resx">
       <DependentUpon>PostTicket.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -250,8 +244,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image-removebg-preview %287%29.png" />
@@ -270,7 +262,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\main_ticket_background.png" />
-
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
