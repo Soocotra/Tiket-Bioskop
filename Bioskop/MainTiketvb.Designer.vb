@@ -117,7 +117,9 @@ Partial Class MainTiketvb
         '
         'BTPesan
         '
-        Me.BTPesan.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.BTPesan.BackColor = System.Drawing.SystemColors.Highlight
+        Me.BTPesan.FlatAppearance.BorderSize = 0
+        Me.BTPesan.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BTPesan.Font = New System.Drawing.Font("Cambria", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTPesan.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BTPesan.Location = New System.Drawing.Point(230, 64)
@@ -130,6 +132,7 @@ Partial Class MainTiketvb
         'BTDelete
         '
         Me.BTDelete.BackColor = System.Drawing.Color.Red
+        Me.BTDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BTDelete.Font = New System.Drawing.Font("Cambria", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BTDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BTDelete.Location = New System.Drawing.Point(847, 545)
@@ -152,6 +155,7 @@ Partial Class MainTiketvb
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BTSignOut)
         Me.Controls.Add(Me.DGTicket)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DoubleBuffered = True
         Me.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
