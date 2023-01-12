@@ -34,7 +34,9 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
 
 
+
             Me.MainForm = Global.Bioskop.Login
+
 
         End Sub
     End Class

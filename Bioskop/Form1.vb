@@ -6,6 +6,7 @@
 
         WelcomeLabel.Text = WelcomeLabel.Text + Login.Users.getName
 
+
     End Sub
 
     Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
