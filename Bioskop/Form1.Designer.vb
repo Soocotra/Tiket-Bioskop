@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Form1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnStudio = New System.Windows.Forms.Button()
@@ -30,44 +30,43 @@ Partial Class Form1
         Me.WelcomeLabel = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogOutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Cambria", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(208, 139)
+        Me.Label1.Font = New System.Drawing.Font("Cambria", 18.8!)
+        Me.Label1.Location = New System.Drawing.Point(249, 93)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(137, 28)
+        Me.Label1.Size = New System.Drawing.Size(171, 37)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Data Master"
+        Me.Label1.Text = "Home Page"
         '
         'BtnStudio
         '
         Me.BtnStudio.Font = New System.Drawing.Font("Cambria", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnStudio.Location = New System.Drawing.Point(204, 204)
+        Me.BtnStudio.Location = New System.Drawing.Point(78, 169)
         Me.BtnStudio.Name = "BtnStudio"
         Me.BtnStudio.Size = New System.Drawing.Size(153, 34)
         Me.BtnStudio.TabIndex = 1
-        Me.BtnStudio.Text = "Studio"
+        Me.BtnStudio.Text = "Menu Studio"
         Me.BtnStudio.UseVisualStyleBackColor = True
         '
         'BtnFilm
         '
         Me.BtnFilm.Font = New System.Drawing.Font("Cambria", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnFilm.Location = New System.Drawing.Point(204, 244)
+        Me.BtnFilm.Location = New System.Drawing.Point(249, 169)
         Me.BtnFilm.Name = "BtnFilm"
         Me.BtnFilm.Size = New System.Drawing.Size(153, 34)
         Me.BtnFilm.TabIndex = 2
-        Me.BtnFilm.Text = "Film"
+        Me.BtnFilm.Text = "Menu Film"
         Me.BtnFilm.UseVisualStyleBackColor = True
         '
         'BtnSchedule
         '
         Me.BtnSchedule.Font = New System.Drawing.Font("Cambria", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnSchedule.Location = New System.Drawing.Point(204, 284)
+        Me.BtnSchedule.Location = New System.Drawing.Point(408, 169)
         Me.BtnSchedule.Name = "BtnSchedule"
         Me.BtnSchedule.Size = New System.Drawing.Size(153, 34)
         Me.BtnSchedule.TabIndex = 3
@@ -77,7 +76,7 @@ Partial Class Form1
         'BtnTicket
         '
         Me.BtnTicket.Font = New System.Drawing.Font("Cambria", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnTicket.Location = New System.Drawing.Point(404, 244)
+        Me.BtnTicket.Location = New System.Drawing.Point(249, 241)
         Me.BtnTicket.Name = "BtnTicket"
         Me.BtnTicket.Size = New System.Drawing.Size(153, 34)
         Me.BtnTicket.TabIndex = 4
@@ -96,34 +95,27 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1})
-        Me.MenuStrip1.Location = New System.Drawing.Point(590, 0)
+        Me.MenuStrip1.Location = New System.Drawing.Point(599, 277)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(156, 457)
+        Me.MenuStrip1.Size = New System.Drawing.Size(78, 28)
         Me.MenuStrip1.TabIndex = 6
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'ToolStripMenuItem1
         '
-        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogOutToolStripMenuItem})
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(143, 24)
-        Me.ToolStripMenuItem1.Text = "Menu"
-        '
-        'LogOutToolStripMenuItem
-        '
-        Me.LogOutToolStripMenuItem.Name = "LogOutToolStripMenuItem"
-        Me.LogOutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.LogOutToolStripMenuItem.Text = "Log Out"
+        Me.ToolStripMenuItem1.Text = "Logout"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(746, 457)
+        Me.ClientSize = New System.Drawing.Size(686, 314)
         Me.Controls.Add(Me.WelcomeLabel)
         Me.Controls.Add(Me.BtnTicket)
         Me.Controls.Add(Me.BtnSchedule)
@@ -150,5 +142,4 @@ Partial Class Form1
     Friend WithEvents WelcomeLabel As Label
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents LogOutToolStripMenuItem As ToolStripMenuItem
 End Class

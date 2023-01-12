@@ -14,7 +14,7 @@
     End Sub
 
     Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
-
+        MainFilm.Show()
     End Sub
 
     Private Sub BtnSchedule_Click(sender As Object, e As EventArgs) Handles BtnSchedule.Click
@@ -31,7 +31,8 @@
         Login.TBPassword.Text = "password"
     End Sub
 
-    Private Sub LogOutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogOutToolStripMenuItem.Click
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         Me.Close()
         Login.Show()
     End Sub

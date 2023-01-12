@@ -111,9 +111,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="DataFilm.vb" />
-    </Compile>
     <Compile Include="DataStudio.vb" />
     <Compile Include="EditStudio.Designer.vb">
       <DependentUpon>EditStudio.vb</DependentUpon>
@@ -127,7 +125,6 @@
     <Compile Include="DeleteTicket.vb">
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -135,11 +132,11 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="HapusFilm.Designer.vb">
       <DependentUpon>HapusFilm.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusFilm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="HapusTayang.Designer.vb">
       <DependentUpon>HapusTayang.vb</DependentUpon>
@@ -151,7 +148,6 @@
       <DependentUpon>HapusStudio.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusStudio.vb">
-
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.vb">
