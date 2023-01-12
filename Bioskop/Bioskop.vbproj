@@ -111,6 +111,19 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStudio.vb" />
+    <Compile Include="EditStudio.Designer.vb">
+      <DependentUpon>EditStudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditStudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteTicket.Designer.vb">
+      <DependentUpon>DeleteTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -118,10 +131,28 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+
     <Compile Include="HapusTayang.Designer.vb">
       <DependentUpon>HapusTayang.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusTayang.vb">
+    </Compile>
+    <Compile Include="HapusStudio.Designer.vb">
+      <DependentUpon>HapusStudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="HapusStudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainTiketvb.Designer.vb">
+      <DependentUpon>MainTiketvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainTiketvb.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,6 +171,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+
     <Compile Include="TambahTayang.Designer.vb">
       <DependentUpon>TambahTayang.vb</DependentUpon>
     </Compile>
@@ -157,12 +189,58 @@
       <DependentUpon>UbahTayang.vb</DependentUpon>
     </Compile>
     <Compile Include="UbahTayang.vb">
+    </Compile>
+    <Compile Include="studio.Designer.vb">
+      <DependentUpon>studio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="studio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahStudio.Designer.vb">
+      <DependentUpon>TambahStudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TambahStudio.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+
     <EmbeddedResource Include="HapusTayang.resx">
       <DependentUpon>HapusTayang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditStudio.resx">
+      <DependentUpon>EditStudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HapusStudio.resx">
+      <DependentUpon>HapusStudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="PostTicket.Designer.vb">
+      <DependentUpon>PostTicket.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PostTicket.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tiket.vb" />
+    <Compile Include="User.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DeleteTicket.resx">
+      <DependentUpon>DeleteTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainTiketvb.resx">
+      <DependentUpon>MainTiketvb.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -170,6 +248,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+
     <EmbeddedResource Include="TambahTayang.resx">
       <DependentUpon>TambahTayang.vb</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +257,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UbahTayang.resx">
       <DependentUpon>UbahTayang.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studio.resx">
+      <DependentUpon>studio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahStudio.resx">
+      <DependentUpon>TambahStudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostTicket.resx">
+      <DependentUpon>PostTicket.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
+
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -192,6 +284,25 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
+
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-removebg-preview %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl_121019_25870_59.eps 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sl_121019_25870_59.eps 1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register_background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main_ticket_background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
