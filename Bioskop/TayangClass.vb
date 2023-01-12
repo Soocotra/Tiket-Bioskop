@@ -1,5 +1,4 @@
-﻿Imports System.Diagnostics.Eventing
-Imports System.Text
+﻿
 Imports MySql.Data.MySqlClient
 Public Class TayangClass
 
@@ -134,7 +133,7 @@ Public Class TayangClass
 
     Public Function AddDataScheduleDatabase(tempFilm As String,
                                             tempStudio As String,
-                                            tempTanggal As String,
+                                            tempTanggal As Date,
                                             tempMasuk As String,
                                             tempSelesai As String)
         Dim result As New DataTable
@@ -159,6 +158,7 @@ Public Class TayangClass
             Return result
 
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
             Return ex.Message
         Finally
             dbConn.Dispose()
@@ -234,7 +234,7 @@ Public Class TayangClass
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "DELETE FROM schedules " &
-                "WHERE id_jadwal='" & ID & "'"
+                       "WHERE id='" & ID & "'"
 
             Debug.WriteLine(sqlQuery)
 
@@ -245,6 +245,7 @@ Public Class TayangClass
             sqlRead.Close()
             dbConn.Close()
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
             Return ex.Message
         Finally
             dbConn.Dispose()

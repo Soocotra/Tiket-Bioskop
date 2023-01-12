@@ -89,10 +89,14 @@ Partial Class Tayang
         '
         'jadwalGrid
         '
+        Me.jadwalGrid.AllowUserToAddRows = False
+        Me.jadwalGrid.AllowUserToDeleteRows = False
         Me.jadwalGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.jadwalGrid.Location = New System.Drawing.Point(193, 103)
         Me.jadwalGrid.Name = "jadwalGrid"
+        Me.jadwalGrid.ReadOnly = True
         Me.jadwalGrid.RowHeadersVisible = False
+        Me.jadwalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.jadwalGrid.Size = New System.Drawing.Size(601, 264)
         Me.jadwalGrid.TabIndex = 7
         '

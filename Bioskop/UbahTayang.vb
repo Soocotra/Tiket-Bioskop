@@ -16,8 +16,8 @@
         tanggalDate.Value = Tayang.jadwal.GSTanggal
         filmCombo.Text = Tayang.jadwal.GSFilm
         studioCombo.Text = Tayang.jadwal.GSStudio
-        masukTime.Value = Tayang.jadwal.GSWaktuMasuk
-        selesaiTime.Value = Tayang.jadwal.GSWaktuSelesai
+        masukTime.Value = Convert.ToDateTime(Tayang.jadwal.GSWaktuMasuk)
+        selesaiTime.Value = Convert.ToDateTime(Tayang.jadwal.GSWaktuSelesai)
 
     End Sub
 

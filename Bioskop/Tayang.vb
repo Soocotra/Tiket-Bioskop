@@ -7,6 +7,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        filmCombo.DataSource = Tayang.jadwal.GetDataFilmDatabase()
+        studioCombo.DataSource = Tayang.jadwal.GetDataStudioDatabase()
         ReloadDataScheduleDatabase()
     End Sub
 
@@ -36,7 +38,15 @@
     End Sub
 
     Private Sub hapusBtn_Click(sender As Object, e As EventArgs) Handles hapusBtn.Click
+        Dim selectedSchedule As List(Of String) = jadwal.GetDataScheduleByIDDatabase(selectedTableSchedule)
 
+        Tayang.jadwal.GSIdJadwal = selectedSchedule(0)
+        Tayang.jadwal.GSFilm = selectedSchedule(1)
+        Tayang.jadwal.GSStudio = selectedSchedule(2)
+        Tayang.jadwal.GSTanggal = selectedSchedule(3)
+        Tayang.jadwal.GSWaktuMasuk = selectedSchedule(4)
+        Tayang.jadwal.GSWaktuSelesai = selectedSchedule(5)
+        HapusTayang.Show()
     End Sub
 
     Private Sub jadwalGrid_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles jadwalGrid.CellClick
