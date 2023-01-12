@@ -131,11 +131,11 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-
     <Compile Include="HapusTayang.Designer.vb">
       <DependentUpon>HapusTayang.vb</DependentUpon>
     </Compile>
     <Compile Include="HapusTayang.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="HapusStudio.Designer.vb">
       <DependentUpon>HapusStudio.vb</DependentUpon>
@@ -171,7 +171,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-
     <Compile Include="TambahTayang.Designer.vb">
       <DependentUpon>TambahTayang.vb</DependentUpon>
     </Compile>
@@ -189,6 +188,7 @@
       <DependentUpon>UbahTayang.vb</DependentUpon>
     </Compile>
     <Compile Include="UbahTayang.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="studio.Designer.vb">
       <DependentUpon>studio.vb</DependentUpon>
@@ -204,7 +204,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-
     <EmbeddedResource Include="HapusTayang.resx">
       <DependentUpon>HapusTayang.vb</DependentUpon>
     </EmbeddedResource>
@@ -248,7 +247,6 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-
     <EmbeddedResource Include="TambahTayang.resx">
       <DependentUpon>TambahTayang.vb</DependentUpon>
     </EmbeddedResource>
@@ -269,7 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.vb</DependentUpon>
-
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -284,7 +281,6 @@
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
-
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image-removebg-preview %287%29.png" />

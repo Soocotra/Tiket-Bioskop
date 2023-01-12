@@ -8,7 +8,11 @@
 
         ' Add any initialization after the InitializeComponent() call.
         filmCombo.DataSource = Tayang.jadwal.GetDataFilmDatabase()
+        filmCombo.DisplayMember = "nama"
+        filmCombo.ValueMember = "id"
         studioCombo.DataSource = Tayang.jadwal.GetDataStudioDatabase()
+        studioCombo.DisplayMember = "id"
+        studioCombo.ValueMember = "id"
         ReloadDataScheduleDatabase()
     End Sub
 

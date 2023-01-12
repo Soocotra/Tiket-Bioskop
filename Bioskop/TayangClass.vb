@@ -72,7 +72,7 @@ Public Class TayangClass
         Dim result As New DataTable
 
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
+                                + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
         dbConn.Open()
         sqlCommand.Connection = dbConn
         sqlCommand.CommandText = "SELECT schedules.id AS 'ID Jadwal',
@@ -91,44 +91,55 @@ Public Class TayangClass
         Return result
     End Function
 
-    Public Function GetDataFilmDatabase() As ArrayList
+    Public Function GetDataFilmDatabase()
 
-        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id, nama FROM films"
-        sqlRead = sqlCommand.ExecuteReader
+        Try
+            Dim result As New DataTable
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
+                                    + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id, nama FROM films"
+            sqlRead = sqlCommand.ExecuteReader
 
 
-        While (sqlRead.Read())
-            filmArray.Add(sqlRead(0))
-        End While
 
-        sqlRead.Close()
-        dbConn.Close()
+            result.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
 
-        Return filmArray
+            Return result
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 
-    Public Function GetDataStudioDatabase() As ArrayList
+    Public Function GetDataStudioDatabase()
 
-        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT id FROM studios"
-        sqlRead = sqlCommand.ExecuteReader
+        Try
+            Dim result As New DataTable
+
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
+                                    + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT id FROM studios"
+            sqlRead = sqlCommand.ExecuteReader
 
 
-        While (sqlRead.Read())
-            studioArray.Add(sqlRead(0))
-        End While
 
-        sqlRead.Close()
-        dbConn.Close()
+            result.Load(sqlRead)
+            sqlRead.Close()
+            dbConn.Close()
 
-        Return studioArray
+            Return result
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 
     Public Function AddDataScheduleDatabase(tempFilm As String,
@@ -139,7 +150,7 @@ Public Class TayangClass
         Dim result As New DataTable
 
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
+                                + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
@@ -151,6 +162,7 @@ Public Class TayangClass
                                     & tempMasuk & "', '" _
                                     & tempSelesai & "')"
             sqlRead = sqlCommand.ExecuteReader
+            Debug.Print(sqlQuery)
 
             result.Load(sqlRead)
             sqlRead.Close()
@@ -164,14 +176,15 @@ Public Class TayangClass
             dbConn.Dispose()
         End Try
     End Function
-    Public Function GetDataScheduleByIDDatabase(ID As String) As List(Of String)
-        Dim result As New List(Of String)
+    Public Function GetDataScheduleByIDDatabase(ID As String)
+        Try
+            Dim result As New List(Of String)
 
-        dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
-        dbConn.Open()
-        sqlCommand.Connection = dbConn
-        sqlCommand.CommandText = "SELECT schedules.id,
+            dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
+                                    + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
+            dbConn.Open()
+            sqlCommand.Connection = dbConn
+            sqlCommand.CommandText = "SELECT schedules.id,
                                   id_film,
                                   id_studio,
                                   tanggal,
@@ -179,40 +192,45 @@ Public Class TayangClass
                                   waktu_selesai
                                   FROM schedules
                                   WHERE schedules.id='" & ID & "' "
-        sqlRead = sqlCommand.ExecuteReader
+            sqlRead = sqlCommand.ExecuteReader
 
-        While sqlRead.Read
-            result.Add(sqlRead.GetString(0).ToString())
-            result.Add(sqlRead.GetString(1).ToString())
-            result.Add(sqlRead.GetString(2).ToString())
-            result.Add(sqlRead.GetString(3).ToString())
-            result.Add(sqlRead.GetString(4).ToString())
-            result.Add(sqlRead.GetString(5).ToString())
-        End While
+            While sqlRead.Read
+                result.Add(sqlRead.GetString(0).ToString())
+                result.Add(sqlRead.GetString(1).ToString())
+                result.Add(sqlRead.GetString(2).ToString())
+                result.Add(sqlRead.GetString(3).ToString())
+                result.Add(sqlRead.GetString(4).ToString())
+                result.Add(sqlRead.GetString(5).ToString())
+            End While
 
-        sqlRead.Close()
-        dbConn.Close()
-        Return result
+            sqlRead.Close()
+            dbConn.Close()
+            Return result
+        Catch ex As Exception
+            Return ex.Message
+        Finally
+            dbConn.Dispose()
+        End Try
     End Function
 
     Public Function UpdateDataScheduleByIDDatabase(ID As String,
                                             tempFilm As String,
                                             tempStudio As String,
-                                            tempTanggal As String,
+                                            tempTanggal As Date,
                                             tempMasuk As String,
                                             tempSelesai As String)
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
+                                + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn
             sqlQuery = "UPDATE schedules SET " &
                         "id_film= '" & tempFilm & "',  " &
                         "id_studio= '" & tempStudio & "',  " &
-                        "tanggal= '" & tempTanggal & "',  " &
-                        "waktu_masuk= '" & tempMasuk & "',  " &
-                        "waktu_selesai= '" & tempSelesai & "',  " &
-                        "WHERE schedules.id= '" & ID & "'"
+                        "tanggal= '" & tempTanggal.ToString("yyyy/MM/dd") & "',  " &
+                        "waktu_mulai= '" & tempMasuk & "',  " &
+                        "waktu_selesai= '" & tempSelesai & "'  " &
+                        "WHERE id= " & ID & ""
             Debug.Print(sqlQuery)
             sqlCommand = New MySqlCommand(sqlQuery, dbConn)
             sqlRead = sqlCommand.ExecuteReader
@@ -221,6 +239,7 @@ Public Class TayangClass
             sqlRead.Close()
             dbConn.Close()
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
             Return ex.Message
         Finally
             dbConn.Dispose()
@@ -229,7 +248,7 @@ Public Class TayangClass
     Public Function DeleteDataScheduleByIDDatabase(ID As String)
 
         dbConn.ConnectionString = "server = " + server + ";" + "user id = " + username + ";" _
-                                + "password = " + password + ";" + "database = " + database
+                                + "password = " + password + ";" + "database = " + database + "; Convert Zero Datetime=True"
         Try
             dbConn.Open()
             sqlCommand.Connection = dbConn

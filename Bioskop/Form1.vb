@@ -9,7 +9,7 @@
     End Sub
 
     Private Sub BtnStudio_Click(sender As Object, e As EventArgs) Handles BtnStudio.Click
-
+        studio.Show()
     End Sub
 
     Private Sub BtnFilm_Click(sender As Object, e As EventArgs) Handles BtnFilm.Click
@@ -17,7 +17,7 @@
     End Sub
 
     Private Sub BtnSchedule_Click(sender As Object, e As EventArgs) Handles BtnSchedule.Click
-
+        Tayang.Show()
     End Sub
 
     Private Sub BtnTicket_Click(sender As Object, e As EventArgs) Handles BtnTicket.Click
