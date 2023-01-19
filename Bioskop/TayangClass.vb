@@ -80,7 +80,8 @@ Public Class TayangClass
                                   id_studio AS 'Studio',
                                   tanggal AS 'Tanggal Tayang',
                                   waktu_mulai AS 'Waktu Mulai',
-                                  waktu_selesai AS 'Waktu Selesai'
+                                  waktu_selesai AS 'Waktu Selesai',
+                                  films.foto AS 'Foto'
                                   FROM schedules
                                   INNER JOIN films ON schedules.id_film = films.id"
         sqlRead = sqlCommand.ExecuteReader

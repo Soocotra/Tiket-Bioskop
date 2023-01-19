@@ -28,9 +28,4 @@
             DeleteTicket.Show()
         End If
     End Sub
-
-    Private Sub BTSignOut_Click(sender As Object, e As EventArgs) Handles BTSignOut.Click
-        Me.Close()
-        Login.Show()
-    End Sub
 End Class

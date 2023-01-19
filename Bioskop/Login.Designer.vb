@@ -38,7 +38,7 @@ Partial Class Login
         Me.Label1.Font = New System.Drawing.Font("Cambria", 28.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(697, 132)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(248, 57)
+        Me.Label1.Size = New System.Drawing.Size(241, 55)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "WELCOME"
         '
@@ -59,7 +59,6 @@ Partial Class Login
         Me.TBPassword.Name = "TBPassword"
         Me.TBPassword.Size = New System.Drawing.Size(277, 33)
         Me.TBPassword.TabIndex = 2
-        Me.TBPassword.Text = "Password"
         Me.TBPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.TBPassword.UseSystemPasswordChar = True
         '

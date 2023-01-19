@@ -4,7 +4,7 @@
         ' This call is required by the designer.
         InitializeComponent()
 
-        WelcomeLabel.Text = WelcomeLabel.Text + Login.Users.getName
+        MenuWelcome.Text = MenuWelcome.Text + " " + Login.Users.getName
 
 
     End Sub
@@ -28,11 +28,10 @@
     Private Sub Form1_Closed(sender As Object, e As EventArgs) Handles Me.Closed
         Login.Show()
         Login.TBEmail.Text = "user@example.net"
-        Login.TBPassword.Text = "password"
+        Login.TBPassword.Text = ""
     End Sub
 
-
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         Me.Close()
         Login.Show()
     End Sub

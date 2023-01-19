@@ -27,7 +27,6 @@ Partial Class MainTiketvb
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DGTicket = New System.Windows.Forms.DataGridView()
-        Me.BTSignOut = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BTPesan = New System.Windows.Forms.Button()
@@ -76,17 +75,6 @@ Partial Class MainTiketvb
         Me.DGTicket.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DGTicket.Size = New System.Drawing.Size(754, 436)
         Me.DGTicket.TabIndex = 0
-        '
-        'BTSignOut
-        '
-        Me.BTSignOut.BackColor = System.Drawing.Color.Transparent
-        Me.BTSignOut.Font = New System.Drawing.Font("Cambria", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BTSignOut.Location = New System.Drawing.Point(23, 661)
-        Me.BTSignOut.Name = "BTSignOut"
-        Me.BTSignOut.Size = New System.Drawing.Size(167, 36)
-        Me.BTSignOut.TabIndex = 1
-        Me.BTSignOut.Text = "Sign Out"
-        Me.BTSignOut.UseVisualStyleBackColor = False
         '
         'Label1
         '
@@ -153,7 +141,6 @@ Partial Class MainTiketvb
         Me.Controls.Add(Me.BTPesan)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.BTSignOut)
         Me.Controls.Add(Me.DGTicket)
         Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DoubleBuffered = True
@@ -173,7 +160,6 @@ Partial Class MainTiketvb
     End Sub
 
     Friend WithEvents DGTicket As DataGridView
-    Friend WithEvents BTSignOut As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BTPesan As Button

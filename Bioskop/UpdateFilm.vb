@@ -5,8 +5,8 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        'PBPhoto.Load(MainFilm.dataFilm.GSPhoto)
-        'PBPhoto.SizeMode = PictureBoxSizeMode.StretchImage
+        PBPhoto.Load(MainFilm.dataFilm.GSPhoto)
+        PBPhoto.SizeMode = PictureBoxSizeMode.StretchImage
         DTRelease.Format = DateTimePickerFormat.Custom
         DTRelease.CustomFormat = "yyyy/MM/dd"
         TxtNama.Text = MainFilm.dataFilm.GSNama
@@ -65,6 +65,7 @@
         End If
 
         MainFilm.dataFilm.GSPhoto = OpenFilePic.FileName
+        MainFilm.dataFilm.GSPhoto = MainFilm.dataFilm.GSPhoto.Replace("\", "/")
 
         'Dim infoFilm = New InfoFilm()
         ''DaftarKoleksi.LbKoleksiBuku.Items.Add(DaftarKoleksi.dataPerpus.GSnamaKoleksi)

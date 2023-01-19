@@ -7,13 +7,15 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        filmCombo.DataSource = Tayang.jadwal.GetDataFilmDatabase()
-        filmCombo.DisplayMember = "nama"
-        filmCombo.ValueMember = "id"
-        studioCombo.DataSource = Tayang.jadwal.GetDataStudioDatabase()
-        studioCombo.DisplayMember = "id"
-        studioCombo.ValueMember = "id"
+        'filmCombo.DataSource = Tayang.jadwal.GetDataFilmDatabase()
+        'filmCombo.DisplayMember = "nama"
+        'filmCombo.ValueMember = "id"
+        'studioCombo.DataSource = Tayang.jadwal.GetDataStudioDatabase()
+        'studioCombo.DisplayMember = "id"
+        'studioCombo.ValueMember = "id"
+        LabelJudul.Text = ""
         ReloadDataScheduleDatabase()
+
     End Sub
 
     Private Sub Tayang_Activated(sender As Object, e As EventArgs) Handles Me.Activated
@@ -22,6 +24,7 @@
 
     Private Sub ReloadDataScheduleDatabase()
         jadwalGrid.DataSource = jadwal.GetDataScheduleDatabase()
+        jadwalGrid.Columns("Foto").Visible = False
     End Sub
 
     Private Sub tambahBtn_Click(sender As Object, e As EventArgs) Handles tambahBtn.Click
@@ -59,5 +62,8 @@
         selectedRow = jadwalGrid.Rows(index)
 
         selectedTableSchedule = selectedRow.Cells(0).Value
+        LabelJudul.Text = selectedRow.Cells(1).Value
+        filmPict.Load(selectedRow.Cells(6).Value)
+        filmPict.SizeMode = PictureBoxSizeMode.StretchImage
     End Sub
 End Class

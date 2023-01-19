@@ -37,8 +37,6 @@
             MainFilm.dataFilm.GSGenre.Add("Romance")
         End If
 
-        MainFilm.dataFilm.GSPhoto = OpenFilePic.FileName
-
         'Dim infoFilm = New InfoFilm()
         ''DaftarKoleksi.LbKoleksiBuku.Items.Add(DaftarKoleksi.dataPerpus.GSnamaKoleksi)
         'infoFilm.Show()
@@ -65,7 +63,12 @@
         PBPhoto.Load(OpenFilePic.FileName)
         PBPhoto.SizeMode = PictureBoxSizeMode.StretchImage
 
-        MainFilm.dataFilm.GSPhoto = OpenFilePic.FileNames.ToString()
+        MainFilm.dataFilm.GSPhoto = OpenFilePic.FileName
+        MessageBox.Show(OpenFilePic.FileName)
         MainFilm.dataFilm.GSPhoto = MainFilm.dataFilm.GSPhoto.Replace("\", "/")
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles Label7.Click
+
     End Sub
 End Class

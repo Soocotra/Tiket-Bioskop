@@ -22,144 +22,125 @@ Partial Class Tayang
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.filmCombo = New System.Windows.Forms.ComboBox()
-        Me.idJadwal = New System.Windows.Forms.TextBox()
         Me.filmPict = New System.Windows.Forms.PictureBox()
-        Me.studioCombo = New System.Windows.Forms.ComboBox()
-        Me.filmText = New System.Windows.Forms.Label()
-        Me.studioText = New System.Windows.Forms.Label()
         Me.jadwalGrid = New System.Windows.Forms.DataGridView()
         Me.tambahBtn = New System.Windows.Forms.Button()
         Me.ubahBtn = New System.Windows.Forms.Button()
         Me.hapusBtn = New System.Windows.Forms.Button()
-        Me.tanggalDate = New System.Windows.Forms.DateTimePicker()
-        Me.jadwalLabel = New System.Windows.Forms.Label()
+        Me.LabelJudul = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.filmPict, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.jadwalGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'filmCombo
-        '
-        Me.filmCombo.FormattingEnabled = True
-        Me.filmCombo.Location = New System.Drawing.Point(27, 63)
-        Me.filmCombo.Name = "filmCombo"
-        Me.filmCombo.Size = New System.Drawing.Size(213, 21)
-        Me.filmCombo.TabIndex = 1
-        '
-        'idJadwal
-        '
-        Me.idJadwal.Location = New System.Drawing.Point(26, 24)
-        Me.idJadwal.Name = "idJadwal"
-        Me.idJadwal.Size = New System.Drawing.Size(81, 20)
-        Me.idJadwal.TabIndex = 2
-        '
         'filmPict
         '
-        Me.filmPict.Location = New System.Drawing.Point(28, 103)
+        Me.filmPict.Location = New System.Drawing.Point(35, 127)
+        Me.filmPict.Margin = New System.Windows.Forms.Padding(4)
         Me.filmPict.Name = "filmPict"
-        Me.filmPict.Size = New System.Drawing.Size(136, 158)
+        Me.filmPict.Size = New System.Drawing.Size(185, 239)
         Me.filmPict.TabIndex = 3
         Me.filmPict.TabStop = False
-        '
-        'studioCombo
-        '
-        Me.studioCombo.FormattingEnabled = True
-        Me.studioCombo.Location = New System.Drawing.Point(246, 63)
-        Me.studioCombo.Name = "studioCombo"
-        Me.studioCombo.Size = New System.Drawing.Size(46, 21)
-        Me.studioCombo.TabIndex = 4
-        '
-        'filmText
-        '
-        Me.filmText.AutoSize = True
-        Me.filmText.Location = New System.Drawing.Point(24, 47)
-        Me.filmText.Name = "filmText"
-        Me.filmText.Size = New System.Drawing.Size(25, 13)
-        Me.filmText.TabIndex = 5
-        Me.filmText.Text = "Film"
-        '
-        'studioText
-        '
-        Me.studioText.AutoSize = True
-        Me.studioText.Location = New System.Drawing.Point(243, 47)
-        Me.studioText.Name = "studioText"
-        Me.studioText.Size = New System.Drawing.Size(37, 13)
-        Me.studioText.TabIndex = 6
-        Me.studioText.Text = "Studio"
         '
         'jadwalGrid
         '
         Me.jadwalGrid.AllowUserToAddRows = False
         Me.jadwalGrid.AllowUserToDeleteRows = False
         Me.jadwalGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.jadwalGrid.Location = New System.Drawing.Point(193, 103)
+        Me.jadwalGrid.Location = New System.Drawing.Point(257, 127)
+        Me.jadwalGrid.Margin = New System.Windows.Forms.Padding(4)
         Me.jadwalGrid.Name = "jadwalGrid"
         Me.jadwalGrid.ReadOnly = True
         Me.jadwalGrid.RowHeadersVisible = False
+        Me.jadwalGrid.RowHeadersWidth = 51
         Me.jadwalGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.jadwalGrid.Size = New System.Drawing.Size(601, 264)
+        Me.jadwalGrid.Size = New System.Drawing.Size(801, 325)
         Me.jadwalGrid.TabIndex = 7
         '
         'tambahBtn
         '
-        Me.tambahBtn.Location = New System.Drawing.Point(296, 381)
+        Me.tambahBtn.BackColor = System.Drawing.Color.ForestGreen
+        Me.tambahBtn.FlatAppearance.BorderSize = 0
+        Me.tambahBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.tambahBtn.Font = New System.Drawing.Font("Cambria", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tambahBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.tambahBtn.Location = New System.Drawing.Point(473, 471)
+        Me.tambahBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.tambahBtn.Name = "tambahBtn"
-        Me.tambahBtn.Size = New System.Drawing.Size(75, 23)
+        Me.tambahBtn.Size = New System.Drawing.Size(225, 28)
         Me.tambahBtn.TabIndex = 8
         Me.tambahBtn.Text = "Tambah"
-        Me.tambahBtn.UseVisualStyleBackColor = True
+        Me.tambahBtn.UseVisualStyleBackColor = False
         '
         'ubahBtn
         '
-        Me.ubahBtn.Location = New System.Drawing.Point(377, 381)
+        Me.ubahBtn.BackColor = System.Drawing.SystemColors.Highlight
+        Me.ubahBtn.FlatAppearance.BorderSize = 0
+        Me.ubahBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ubahBtn.Font = New System.Drawing.Font("Cambria", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ubahBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.ubahBtn.Location = New System.Drawing.Point(706, 469)
+        Me.ubahBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.ubahBtn.Name = "ubahBtn"
-        Me.ubahBtn.Size = New System.Drawing.Size(75, 23)
+        Me.ubahBtn.Size = New System.Drawing.Size(239, 28)
         Me.ubahBtn.TabIndex = 9
         Me.ubahBtn.Text = "Ubah"
-        Me.ubahBtn.UseVisualStyleBackColor = True
+        Me.ubahBtn.UseVisualStyleBackColor = False
         '
         'hapusBtn
         '
-        Me.hapusBtn.Location = New System.Drawing.Point(458, 381)
+        Me.hapusBtn.BackColor = System.Drawing.Color.Crimson
+        Me.hapusBtn.FlatAppearance.BorderSize = 0
+        Me.hapusBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.hapusBtn.Font = New System.Drawing.Font("Cambria", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.hapusBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.hapusBtn.Location = New System.Drawing.Point(953, 469)
+        Me.hapusBtn.Margin = New System.Windows.Forms.Padding(4)
         Me.hapusBtn.Name = "hapusBtn"
-        Me.hapusBtn.Size = New System.Drawing.Size(75, 23)
+        Me.hapusBtn.Size = New System.Drawing.Size(105, 28)
         Me.hapusBtn.TabIndex = 10
         Me.hapusBtn.Text = "Hapus"
-        Me.hapusBtn.UseVisualStyleBackColor = True
+        Me.hapusBtn.UseVisualStyleBackColor = False
         '
-        'tanggalDate
+        'LabelJudul
         '
-        Me.tanggalDate.Location = New System.Drawing.Point(113, 24)
-        Me.tanggalDate.Name = "tanggalDate"
-        Me.tanggalDate.Size = New System.Drawing.Size(179, 20)
-        Me.tanggalDate.TabIndex = 11
+        Me.LabelJudul.AutoEllipsis = True
+        Me.LabelJudul.AutoSize = True
+        Me.LabelJudul.Font = New System.Drawing.Font("Cambria", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelJudul.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.LabelJudul.Location = New System.Drawing.Point(31, 370)
+        Me.LabelJudul.MaximumSize = New System.Drawing.Size(181, 21)
+        Me.LabelJudul.MinimumSize = New System.Drawing.Size(51, 21)
+        Me.LabelJudul.Name = "LabelJudul"
+        Me.LabelJudul.Size = New System.Drawing.Size(51, 21)
+        Me.LabelJudul.TabIndex = 13
+        Me.LabelJudul.Text = "Judul"
         '
-        'jadwalLabel
+        'Label1
         '
-        Me.jadwalLabel.AutoSize = True
-        Me.jadwalLabel.Location = New System.Drawing.Point(25, 9)
-        Me.jadwalLabel.Name = "jadwalLabel"
-        Me.jadwalLabel.Size = New System.Drawing.Size(52, 13)
-        Me.jadwalLabel.TabIndex = 12
-        Me.jadwalLabel.Text = "Id Jadwal"
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Cambria", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(415, 46)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(258, 33)
+        Me.Label1.TabIndex = 14
+        Me.Label1.Text = "Form Jadwal Tayang"
         '
         'Tayang
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(822, 416)
-        Me.Controls.Add(Me.jadwalLabel)
-        Me.Controls.Add(Me.tanggalDate)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(1096, 512)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.LabelJudul)
         Me.Controls.Add(Me.hapusBtn)
         Me.Controls.Add(Me.ubahBtn)
         Me.Controls.Add(Me.tambahBtn)
         Me.Controls.Add(Me.jadwalGrid)
-        Me.Controls.Add(Me.studioText)
-        Me.Controls.Add(Me.filmText)
-        Me.Controls.Add(Me.studioCombo)
         Me.Controls.Add(Me.filmPict)
-        Me.Controls.Add(Me.idJadwal)
-        Me.Controls.Add(Me.filmCombo)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Tayang"
         Me.Text = "Jadwal Tayang"
         CType(Me.filmPict, System.ComponentModel.ISupportInitialize).EndInit()
@@ -168,16 +149,11 @@ Partial Class Tayang
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents filmCombo As ComboBox
-    Friend WithEvents idJadwal As TextBox
     Friend WithEvents filmPict As PictureBox
-    Friend WithEvents studioCombo As ComboBox
-    Friend WithEvents filmText As Label
-    Friend WithEvents studioText As Label
     Friend WithEvents jadwalGrid As DataGridView
     Friend WithEvents tambahBtn As Button
     Friend WithEvents ubahBtn As Button
     Friend WithEvents hapusBtn As Button
-    Friend WithEvents tanggalDate As DateTimePicker
-    Friend WithEvents jadwalLabel As Label
+    Friend WithEvents LabelJudul As Label
+    Friend WithEvents Label1 As Label
 End Class
